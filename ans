@@ -1,0 +1,10 @@
+import numpy as np
+array1 = np.array([[10, 8], [3, 5]])
+array2 = np.linalg.inv(array1)
+print(array2)
+array3=array1@array2
+print(array3)
+array4=np.linalg.eig(array1)
+print(array4)
+array5=np.linalg.matrix_rank(array1)
+print(array5)
