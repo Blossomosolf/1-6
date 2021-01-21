@@ -1,10 +1,11 @@
 import numpy as np
 array1 = np.array([[10, 8], [3, 5]])
 array2 = np.linalg.inv(array1)
-print(array2)
-array3=array1@array2
+array3= np.dot(array2,array1)
 print(array3)
-array4=np.linalg.eig(array1)
+array4=array1@array2
 print(array4)
-array5=np.linalg.matrix_rank(array1)
+array5=np.linalg.eig(array1)
 print(array5)
+array6=np.linalg.svd(array1)
+print(array6)
