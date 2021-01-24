@@ -1,11 +1,9 @@
-import numpy as np
-array1 = np.array([[10, 8], [3, 5]])
-array2 = np.linalg.inv(array1)
-array3= np.dot(array2,array1)
-print(array3)
-array4=array1@array2
-print(array4)
-array5=np.linalg.eig(array1)
-print(array5)
-array6=np.linalg.svd(array1)
-print(array6)
+array1 = np.array(range(30))
+array2 = np.array([2,3,5])
+np.savez('array.npz',array1,array2)
+
+load_array = np.load('array.npz')
+array3 = np.array([[4,5,6],[1,2,3]])
+a=np.savez('new_array.npz',load_array['arr_0'],load_array['arr_1'],array3)
+
+print(a)
